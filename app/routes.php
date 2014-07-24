@@ -31,7 +31,7 @@ Route::pattern('role', '[0-9]+');
  *  Admin Routes
  *  ------------------------------------------
  */
-Route::group(array('prefix' => 'admin'), function()
+Route::group(array('prefix' => 'admin','before'=>'auth|admin'), function()
 {
 
     # User Management
